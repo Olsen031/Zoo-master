@@ -42,18 +42,18 @@ public class Zoo
                 case "visit cages" : 
                 msg = visitCages(animals);
                 break;
-//                case "look up" :
-//                msg = lookUp(animals);
-//                break;
+                case "look up" :
+                msg = lookUp(animals);
+                break;
                 case "look around" :
                 msg = lookAround(animals);
                 break;
                 case "listen" :
                 msg = listen(animals);
                 break;
-//                case "look down":
-//                msg = lookDown(animals);
-//                break;
+                case "look down":
+                msg = lookDown(animals);
+                break;
                 default : msg = "You flail helplessly with indecision.";
             }
             System.out.println("\n" + msg);
@@ -87,22 +87,22 @@ public class Zoo
         return msg;
     }
 
-//    public static String lookDown(List<Animal> animals)
-//    {
-//        String msg = "";
-//
-//        for(Animal a : animals)
-//        {
-//            if(a instanceof Swimming)
-//            {
-//                Swimming f = (Swimming) a;
-//                msg += a.getName() + ": \n       "
-//                + f.swim() + "\n";
-//            }
-//        }
-//        return msg;
-//
-//    }
+    public static String lookDown(List<Animal> animals)
+    {
+        String msg = "";
+
+        for(Animal a : animals)
+        {
+            if(a instanceof Swimming)
+            {
+                Swimming f = (Swimming) a;
+                msg += a.getName() + ": \n       "
+                + f.swim() + "\n";
+            }
+        }
+        return msg;
+
+    }
 
     public static String lookAround(List<Animal> animals)
     {
@@ -121,22 +121,22 @@ public class Zoo
 
     }
 
-//    public static String lookUp(List<Animal> animals)
-//    {
-//        String msg = "";
-//
-//        for(Animal a : animals)
-//        {
-//            if(a instanceof Flying)
-//            {
-//                Flying f = (Flying) a;
-//                msg += a.getName() + ": \n       "
-//                + f.fly() + "\n";
-//            }
-//        }
-//        return msg;
-//
-//    }
+    public static String lookUp(List<Animal> animals)
+    {
+        String msg = "";
+
+        for(Animal a : animals)
+        {
+            if(a instanceof Flying)
+            {
+                Flying f = (Flying) a;
+                msg += a.getName() + ": \n       "
+                + f.fly() + "\n";
+            }
+        }
+        return msg;
+
+    }
 
     /**
      * This prints an ellipses with 1 second between each period
@@ -172,6 +172,13 @@ public class Zoo
         animals.add(hairy);
         Chimpanzee george = new Chimpanzee();
         animals.add(george);
+        Primate hairy = new Primate();
+        animals.add(hairy);
+        Chimpanzee george = new Chimpanzee();
+        animals.add(george);
+
+
+
 
     }
 }
