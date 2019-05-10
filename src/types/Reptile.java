@@ -1,3 +1,8 @@
+package types;
+
+import main.Animal;
+import animal_qualities.Swimming;
+
 public class Reptile extends Animal implements Swimming {
 
     public Reptile(){

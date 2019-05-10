@@ -1,3 +1,8 @@
+package types;
+
+import main.Animal;
+import animal_qualities.Walking;
+
 public class Primate extends Animal implements Walking
     {
         public Primate()

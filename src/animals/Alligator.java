@@ -1,5 +1,7 @@
- 
 
+package animals;
+
+import types.Reptile;
 
 /**
  * Write a description of class Alligator here.

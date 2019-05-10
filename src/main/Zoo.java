@@ -1,10 +1,29 @@
  
+package main;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.Random;
 import java.util.Scanner;
+
+import animal_qualities.Galloping;
+import animal_qualities.Swimming;
+import animal_qualities.Flying;
+import animal_qualities.Walking;
+import animals.Alligator;
+import animals.Chimpanzee;
+import animals.Orangutan;
+import animals.Parrot;
+import animals.RingTailedLemur;
+import animals.Zebra;
+import types.Bird;
+import types.Equine;
+import types.Reptile;
+import types.Primate;
+import monies.Concessions;
+import monies.Gift_Shop;
+import monies.Wallet;
 /**
  * Test
  * 
@@ -54,6 +73,17 @@ public class Zoo
                 case "look down":
                 msg = lookDown(animals);
                 break;
+                case "look behind":
+                    msg = lookBehind(animals);
+                    break;
+                case "concessions":
+                    monies.Concessions();
+                    break;
+                case "gift shop":
+                    monies.Gift_Shop();
+                    break;
+
+
                 default : msg = "You flail helplessly with indecision.";
             }
             System.out.println("\n" + msg);
@@ -121,6 +151,19 @@ public class Zoo
 
     }
 
+    public static String lookBehind(List<Animal> animals){
+        String msg ="";
+        for(Animal a: animals)
+        {
+            if(a instanceof Galloping){
+                Galloping g = (Galloping) a;
+                msg += a.getName() + ": \n          "
+                        + g.gallop() + "\n";
+            }
+        }
+        return msg;
+    }
+
     public static String lookUp(List<Animal> animals)
     {
         String msg = "";
@@ -168,14 +211,30 @@ public class Zoo
     public static void populateAnimals(List<Animal> animals)
     {
 
-        Primate hairy = new Primate();
-        animals.add(hairy);
+//        Primate hairy = new Primate();
+//        animals.add(hairy);
         Chimpanzee george = new Chimpanzee();
         animals.add(george);
-        Primate hairy = new Primate();
-        animals.add(hairy);
-        Chimpanzee george = new Chimpanzee();
-        animals.add(george);
+//        Primate orange = new Primate();
+//        animals.add(orange);
+        Orangutan peter = new Orangutan();
+        animals.add(peter);
+//        Primate ring = new Primate();
+//        animals.add(ring);
+        RingTailedLemur arnold = new RingTailedLemur();
+        animals.add(arnold);
+//        Reptile scaly = new Reptile();
+//        animals.add(scaly);
+        Alligator callie = new Alligator();
+        animals.add(callie);
+//        Bird feather = new Bird();
+//        animals.add(feather);
+        Parrot polly = new Parrot();
+        animals.add(polly);
+//        Equine black = new Equine();
+//        animals.add(black);
+        Zebra Stripes = new Zebra();
+        animals.add(Stripes);
 
 
 

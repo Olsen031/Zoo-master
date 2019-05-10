@@ -1,3 +1,8 @@
+package types;
+
+import main.Animal;
+import animal_qualities.Flying;
+
 public class Bird extends Animal implements Flying {
 
     public Bird(){

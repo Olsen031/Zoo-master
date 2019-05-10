@@ -1,3 +1,7 @@
+package animals;
+
+import types.Primate;
+
 public class RingTailedLemur extends Primate {
     private String age;
     public RingTailedLemur(){

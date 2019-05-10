@@ -1,3 +1,5 @@
+package animal_qualities;
+
 public interface Swimming {
     //ALL VARIABLES ARE AUTOMATICALLY PUBLIC STATIC FINAL
     //WHETHER YOU WRITE THE MODIFIERS OR NOT

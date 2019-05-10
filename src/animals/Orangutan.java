@@ -1,5 +1,7 @@
- 
 
+package animals;
+
+import types.Primate;
 
 /**
  * Write a description of class Orangutan here.

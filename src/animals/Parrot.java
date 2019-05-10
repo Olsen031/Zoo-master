@@ -1,4 +1,6 @@
- 
+package animals;
+
+import types.Bird;
 
 
 /**
