@@ -7,20 +7,17 @@ import java.util.concurrent.TimeUnit;
 import java.util.Random;
 import java.util.Scanner;
 
-import animal_qualities.Galloping;
-import animal_qualities.Swimming;
-import animal_qualities.Flying;
-import animal_qualities.Walking;
+//import animal_qualities.Galloping;
+//import animal_qualities.Swimming;
+//import animal_qualities.Flying;
+//import animal_qualities.Walking;
+import animal_qualities.*;
 import animals.Alligator;
 import animals.Chimpanzee;
 import animals.Orangutan;
 import animals.Parrot;
 import animals.RingTailedLemur;
 import animals.Zebra;
-import types.Bird;
-import types.Equine;
-import types.Reptile;
-import types.Primate;
 import monies.Concessions;
 import monies.Gift_Shop;
 import monies.Wallet;
@@ -77,10 +74,10 @@ public class Zoo
                     msg = lookBehind(animals);
                     break;
                 case "concessions":
-                    monies.Concessions();
+                    monies.Concessions.getOrder();
                     break;
                 case "gift shop":
-                    monies.Gift_Shop();
+                    monies.Gift_Shop.getPurchase();
                     break;
 
 
@@ -95,6 +92,7 @@ public class Zoo
         System.out.println(Math.random() < .8 ? "\nHave a nice day!  Hope you come back!" : "\nAn escaped lion eats you on your way out.  Sorry!");
 
     }
+
 
     public static String visitCages(List<Animal> animals)
     {
@@ -180,6 +178,9 @@ public class Zoo
         return msg;
 
     }
+
+
+
 
     /**
      * This prints an ellipses with 1 second between each period
