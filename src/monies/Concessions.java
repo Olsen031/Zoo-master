@@ -29,7 +29,7 @@ public class Concessions {
         System.out.println("Food items: Funnel Cake $10, Kettle Corn $5, Popcorn $7, Hamburger $4, Bottle of Water $2");
         System.out.println("Enter the food item you wish to purchase:");
         itemOrder = keyboard.nextLine();
-        Wallet wallet1 = new Wallet(100);
+        Wallet wallet1 = new Wallet();
 
         switch (itemOrder) {
             case "Funnel Cake":
@@ -58,7 +58,12 @@ public class Concessions {
                 break;
         }
 
-        wallet1.setCost(order);
+//
+//  wallet1.setCost(order);
+        int temp =  wallet1.getWallet() - order;
+//        System.out.println("Your remaining wallet is: $"  + wallet1.getTotalWallet());
+        System.out.println("Your remaining wallet is: $" + temp);
+
         return wallet1.getTotalWallet();
     }
 

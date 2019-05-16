@@ -33,7 +33,8 @@ public class Gift_Shop {
                 "Huge Pixie Sticks $5,  Zoo Pencils $2");
         System.out.println("Enter the item you wish to purchase:");
         itemOrder = keyboard.nextLine();
-        Wallet wallet1 = new Wallet(100);
+        Wallet wallet1 = new Wallet();
+
 
         switch (itemOrder) {
             case "Snow Globes":
@@ -79,7 +80,7 @@ public class Gift_Shop {
         }
 
         wallet1.setCost(order);
-        System.out.println(wallet1.getTotalWallet());
+        System.out.println("Your remaining wallet is: $" + wallet1.getTotalWallet());
 
         return wallet1.getTotalWallet();
     }
